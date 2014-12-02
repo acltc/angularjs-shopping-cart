@@ -1,0 +1,21 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#available-products {
+  float: left;
+  width: 400px;
+  border: 2px solid black;
+}
+
+#cart {
+  float: left;
+  width: 300px;
+  border: 2px dotted green;
+}
+
+#summary {
+  float: left;
+  width: 200px;
+  border: 2px dashed blue;
+}

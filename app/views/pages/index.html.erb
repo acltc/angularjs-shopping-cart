@@ -1,0 +1,29 @@
+<h1>Go shopping!</h1>
+<div ng-app="app">
+  <div ng-controller="shoppingCtrl">
+
+    <div id="available-products">
+      <h2>Products</h2>
+      <div class="product" ng-repeat="product in products" ng-click="addProductToCart(product)">
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.price | currency }}</p>
+      </div>
+    </div>
+
+    <div id="cart">
+      <h2>Cart</h2>
+      <div class="carted-product" ng-repeat="product in cart track by $index" ng-click="removeItem($index)">
+        <h5>{{ product.name }}</h5>
+      </div>
+    </div>
+
+    <div id="summary">
+      <h2>Summary</h2>
+      <h4>Subtotal: {{ subtotal() | currency }}</h4>
+      <h5>Sales Tax (9%): {{ tax() | currency }}</h5>
+      <h3>Total: {{ total() | currency }}</h3>
+    </div>
+
+
+  </div>
+</div>
